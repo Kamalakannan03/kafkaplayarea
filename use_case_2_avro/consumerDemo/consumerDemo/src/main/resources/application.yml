@@ -1,0 +1,30 @@
+server:
+  port: ${PORT:8081}
+spring:
+  kafka:
+    bootstrap-servers: pkc-921jm.us-east-2.aws.confluent.cloud:9092
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        jaas:
+          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='4QCZMPAHSAE6D6PD' password='a1oJBp/2Fqox7sMun1zw0NoZaFjGUkrHpQDhQ+K8z9xZeMwv/J3LbYx8MJENhNhH';
+        mechanism: PLAIN
+#    producer:
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      #group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+        specific:
+          avro:
+            reader: "true"
+        # CCloud Schema Registry Connection parameter
+        schema.registry.url: https://psrc-0kywq.us-east-2.aws.confluent.cloud
+        basic.auth.credentials.source: USER_INFO
+        specific.avro.reader: true
+        schema.registry.basic.auth.user.info: JERC6RN4V2XSH3JG:1/ygI7A+UiR1IelVJ1Ryqdtxcd9Lr4yx8irPvXWvR4T3+WM4TP1yuH7xl1RCsHW0
