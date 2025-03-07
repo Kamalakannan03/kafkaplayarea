@@ -1,0 +1,42 @@
+{
+  "doc": "Sample schema to help you get started.",
+  "fields": [
+    {
+      "doc": "The id of the order.",
+      "name": "orderId",
+      "type": "int"
+    },
+    {
+      "doc": "Timestamp of the order.",
+      "name": "orderTimeAndDate",
+      "type": "int"
+    },
+    {
+      "doc": "The address of the order.",
+      "name": "orderAddress",
+      "type": "string"
+    },
+    {
+      "doc": "The Description of the order.",
+      "name": "orderDetails",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "doc": "The order.",
+      "name": "order",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "doc": "The final",
+      "name": "finalString",
+      "type": "string",
+      "default": ""
+    }
+
+  ],
+  "name": "sampleRecord",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}
