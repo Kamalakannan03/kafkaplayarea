@@ -1,0 +1,16 @@
+{
+  "type" : "record",
+  "name" : "UserDto",
+  "namespace" : "com.kafkaproducer.producerDemo.dto",
+  "fields" : [ {
+    "name" : "id",
+    "type" : "int"
+  }, {
+    "name" : "name",
+    "type" : "string"
+  }, {
+    "name" : "location",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}
