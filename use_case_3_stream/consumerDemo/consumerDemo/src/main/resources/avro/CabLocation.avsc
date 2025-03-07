@@ -1,0 +1,23 @@
+{
+  "doc": "Cab location tracker",
+  "fields": [
+    {
+      "doc": "The int type is a 32-bit signed integer.",
+      "name": "LocationCode",
+      "type": "int"
+    },
+    {
+      "doc": "The Latitude of location",
+      "name": "Latitude",
+      "type": "string"
+    },
+    {
+      "doc": "The Longitude of location",
+      "name": "Longitude",
+      "type": "string"
+    }
+  ],
+  "name": "CabLocation",
+  "namespace": "com.mycorp.mynamespace",
+  "type": "record"
+}
